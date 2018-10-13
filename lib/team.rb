@@ -1,3 +1,6 @@
+require './lib/roster'
+require './lib/team_info'
+
 module NBAStats
   module Team
     def self.bucks
@@ -121,20 +124,11 @@ module NBAStats
     end
 
     class Team
-      attr_reader :roster
+      attr_reader :roster, :info
 
       def initialize(team_id)
         @roster = Roster.new(team_id)
-      end
-    end
-
-    class Roster
-      attr_reader :coaches, :players
-
-      def initialize(team_id)
-        response = JSON.parse(RestClient.get("stats.nba.com/stats/commonteamroster/?LeagueID=00&TeamID=#{team_id}&Season=2018-19", NBAStats::REQUEST_HEADERS))
-        @coaches = response['resultSets'][1]['rowSet'].map { |coach| coach[5] }
-        @players = response['resultSets'][0]['rowSet'].map { |player| player[3] }
+        @info = TeamInfo.new(team_id)
       end
     end
   end
