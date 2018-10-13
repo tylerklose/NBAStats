@@ -11,48 +11,7 @@ I am writing this documentation before I write any of the actual code. Why? Beca
 
 ### Implemented
 
-Easy access to teams with the following syntax:
-```ruby
-NBAStats::Team.knicks
-NBAStats::Team.lakers
-NBAStats::Team.sixers
-```
-
-You can get more information like roster info:
-```ruby
-NBAStats::Team.knicks.roster.players
-NBAStats::Team.knicks.roster.coaches
-```
-
-You can also get team info:
-```ruby
-NBAStats::Team.knicks.info.id
-NBAStats::Team.knicks.info.season_year
-NBAStats::Team.knicks.info.city
-NBAStats::Team.knicks.info.name
-NBAStats::Team.knicks.info.abbreviation
-NBAStats::Team.knicks.info.conference
-NBAStats::Team.knicks.info.division
-NBAStats::Team.knicks.info.code
-NBAStats::Team.knicks.info.wins
-NBAStats::Team.knicks.info.losses
-NBAStats::Team.knicks.info.win_percentage
-NBAStats::Team.knicks.info.conference_rank
-NBAStats::Team.knicks.info.division_rank
-NBAStats::Team.knicks.info.first_year
-NBAStats::Team.knicks.info.current_or_last_year
-```
-
-^ I would prefer the following
-```ruby
-NBAStats::Team.knicks.players
-NBAStats::Team.knicks.coaches
-
-NBAStats::Team.knicks.city
-NBAStats::Team.knicks.name
-NBAStats::Team.knicks.abbreviation
-NBAStats::Team.knicks.conference
-```
+See NBA Stats API Documentation (it's more thorough at the moment)
 
 
 ### Ideas for the Future
