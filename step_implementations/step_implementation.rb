@@ -21,3 +21,14 @@ step 'Coaches are still up to date <table>' do |coaches_table|
     assert_equal(expected_coach, actual_coach)
   end
 end
+
+step 'Data is obtainable <table>' do |queries_table|
+  queries_table.rows.each do |query_row|
+    queries = [query_row['Team'], query_row['first_method'], query_row['second_method'], query_row['third_method'], query_row['fourth_method']].map {|method_name| method_name == 'nil' ? nil : method_name}.compact
+    puts "queries: #{queries}"
+    object = NBAStats::Team
+    queries.each_with_index do |query, index|
+      object = object.send(query)
+    end
+  end
+end

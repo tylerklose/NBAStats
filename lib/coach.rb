@@ -7,6 +7,16 @@ class Coach
     @data = data
   end
 
+  def coaching_level
+    # this is what it seems like from my sample size of 1
+    # 1.0 - head coach
+    # 2.0 - assistant coach
+    # 3.0 - trainer
+    # 4.0 -- assistant trainer
+
+    @data[7]
+  end
+
   def code
     @data[6]
   end
@@ -26,16 +36,6 @@ class Coach
 
   def id
     @data[2]
-  end
-
-  def coaching_level
-    # this is what it seems like from my sample size of 1
-    # 1.0 - head coach
-    # 2.0 - assistant coach
-    # 3.0 - trainer
-    # 4.0 -- assistant trainer
-
-    @data[7]
   end
 
   def last_name
