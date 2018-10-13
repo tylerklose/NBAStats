@@ -9,29 +9,29 @@ More. will. come.
 
 I am writing this documentation before I write any of the actual code. Why? Because I want this wrapper to be easy to use and have it feel natural when working with it. Some of what is listed in here will not yet be implemented.
 
-### Running List of Ideas
+### Implemented
 
-Team.knicks.roster
-Team.knicks.stats
-Team.knicks.player_stats
+See NBA Stats API Documentation (it's more thorough at the moment)
 
-and/or
 
-Team('knicks').roster
-Team('knicks').stats
-Team('knicks').player_stats
+### Ideas for the Future
 
+```ruby
 Player('steph curry').team
 Player('steph curry').stats
 Player('steph curry').info
 
+# we could probably use method missing to take care of some of these. keep all the player ids in a hash somewhere
+
 College('unc').players
 
-Game('knicks').vs('sixers')
-Game('knicks').home
-Game('knicks').away
+knicks.games.vs('sixers')
+knicks.games.home
+knicks.games.away
 
 League.leaders
 League.standings
-League('east').teams
-League('west').standings
+League.east.teams
+League.west.standings
+```
+
