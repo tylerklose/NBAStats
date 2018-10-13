@@ -48,7 +48,7 @@ attr_reader :age, :birth_date, :data, :experience, :full_name, :height, :id
 NBAStats::Team.knicks.roster.players.first.position
 ```
 
-## Paramters (and their possible values)
+## Parameters (and their possible values)
 
 ### LeagueID
 00 (NBA), 01 (ABA)
