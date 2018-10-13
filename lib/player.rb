@@ -1,5 +1,3 @@
-require './lib/player_info'
-
 class Player
   attr_reader :age, :birth_date, :data, :experience, :full_name, :height, :id,
               :league_id, :number, :position, :school, :season, :team_id, :weight
