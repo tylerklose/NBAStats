@@ -4,7 +4,7 @@ class TeamInfo
               :id, :losses, :season_year, :wins, :win_percentage
 
   def initialize(team_id)
-    response = JSON.parse(RestClient.get("stats.nba.com/stats/teaminfocommon/?LeagueID=00&TeamID=1610612752&Season=2018-19&SeasonType=regular", NBAStats::REQUEST_HEADERS))['resultSets'][0]['rowSet'][0]
+    response = JSON.parse(RestClient.get("stats.nba.com/stats/teaminfocommon/?LeagueID=00&TeamID=#{team_id}&Season=2018-19&SeasonType=regular", NBAStats::REQUEST_HEADERS))['resultSets'][0]['rowSet'][0]
 
     @name = response[3]
     @abbreviation = response[4]

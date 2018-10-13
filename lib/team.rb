@@ -124,11 +124,16 @@ module NBAStats
     end
 
     class Team
-      attr_reader :roster, :info
-
       def initialize(team_id)
-        @roster = Roster.new(team_id)
-        @info = TeamInfo.new(team_id)
+        @team_id = team_id
+      end
+
+      def info
+        TeamInfo.new(@team_id)
+      end
+
+      def roster
+        Roster.new(@team_id)
       end
     end
   end
