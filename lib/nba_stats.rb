@@ -1,6 +1,7 @@
 require 'json'
 require 'rest-client'
 require './lib/team'
+require './lib/player'
 
 module NBAStats
   BASE_URL = 'http://stats.nba.com/stats/'

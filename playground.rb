@@ -3,12 +3,10 @@
 require './lib/nba_stats'
 
 teams = NBAStats::Team
-"\nbeginning with knicks"
 knicks = teams.knicks
-puts knicks.info.city
-puts knicks.info.abbreviation
+knicks_roster = knicks.roster
+puts knicks_roster.coaches.first.data
+puts knicks_roster.players[9].data
+# puts knicks.info.abbreviation
 
-puts "\nshould be suns"
-suns = teams.suns
-puts suns.info.first_year
-puts suns.info.abbreviation
+# Player.new(1610612752).info
