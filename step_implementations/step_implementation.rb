@@ -1,6 +1,9 @@
 require 'test/unit'
 include Test::Unit::Assertions # rubocop:disable Style/MixinUsage
 
+require 'simplecov'
+SimpleCov.start
+
 step 'Require NBAStats library' do
   require './lib/nba_stats'
 end
