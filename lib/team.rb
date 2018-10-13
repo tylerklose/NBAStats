@@ -2,6 +2,8 @@ require './lib/roster'
 require './lib/team_info'
 
 module NBAStats
+  # This module allows you to easily access team info by using team name
+  # NBAStats::Team.knicks
   module Team
     def self.bucks
       Team.new(1_610_612_749)
@@ -123,6 +125,7 @@ module NBAStats
       Team.new(1_610_612_764)
     end
 
+    # A class that abstracts away the details around TeamInfo and Roster
     class Team
       def initialize(team_id)
         @team_id = team_id

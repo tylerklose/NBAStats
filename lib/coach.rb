@@ -1,26 +1,64 @@
+# Each element of the array returned via NBAStats::Teams.knicks.roster.coaches
+# will be an instance of the Coach class.
 class Coach
-  attr_reader :code, :college, :data, :first_name, :full_name, :id, :is_assistant,
-              :last_name, :position, :season, :team_id
+  attr_reader :data
 
   def initialize(data)
     @data = data
-    @team_id = data[0]
-    @season = data[1]
-    @id = data[2]
-    @first_name = data[3]
-    @last_name = data[4]
-    @full_name = data[5]
-    @code = data[6]
-    @is_assistant = data[7]
-    @position = data[8]
-    @college = data[9].delete_prefix('College - ') # 'College - North Carolina' is an example
   end
 
-  def is_assistant?
-    is_assistant != 1.0
+  def code
+    @data[6]
   end
 
-  def is_head_coach?
-    is_assistant == 1.0
+  def college
+    # data[9] yields 'College - North Carolina'
+    data[9].delete_prefix('College - ')
+  end
+
+  def first_name
+    @data[3]
+  end
+
+  def full_name
+    @data[5]
+  end
+
+  def id
+    @data[2]
+  end
+
+  def coaching_level
+    # this is what it seems like from my sample size of 1
+    # 1.0 - head coach
+    # 2.0 - assistant coach
+    # 3.0 - trainer
+    # 4.0 -- assistant trainer
+
+    @data[7]
+  end
+
+  def last_name
+    @data[4]
+  end
+
+  def position
+    @data[8]
+  end
+
+  def season
+    @data[1]
+  end
+
+  def team_id
+    @data[0]
+  end
+
+  def assistant?
+    coaching_level != 1.0
+  end
+
+  def head_coach?
+    coaching_level == 1.0
   end
 end
