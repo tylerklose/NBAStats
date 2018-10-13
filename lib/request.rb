@@ -1,23 +1,25 @@
-# Wrapper around the formulation of request to stats.nba.com
-module Request
-  class << self
+module NBAStats
+  # Wrapper around the formulation of request to stats.nba.com
+  module Request
     def self.get(endpoint, parameters)
       JSON.parse(fetch(request_url(endpoint, parameters)))
     end
 
-    protected
+    class << self
+      protected
 
-    def fetch(url)
-      RestClient.get(url, NBAStats::REQUEST_HEADERS)
-    end
+      def fetch(url)
+        RestClient.get(url, NBAStats::REQUEST_HEADERS)
+      end
 
-    def parameters_string(parameters)
-      parameters = { 'LeagueID' => '00' }.merge(parameters)
-      parameters.map { |key, value| "#{key}=#{value}" }.join('&')
-    end
+      def parameters_string(parameters)
+        parameters = { 'LeagueID' => '00' }.merge(parameters)
+        parameters.map { |key, value| "#{key}=#{value}" }.join('&')
+      end
 
-    def request_url(endpoint, parameters)
-      "#{NBAStats::BASE_URL}#{endpoint}/?#{parameters_string(parameters)}"
+      def request_url(endpoint, parameters)
+        "#{NBAStats::BASE_URL}#{endpoint}/?#{parameters_string(parameters)}"
+      end
     end
   end
 end

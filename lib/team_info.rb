@@ -6,7 +6,7 @@ class TeamInfo
   def initialize(team_id)
     parameters = { 'TeamID' => team_id, 'Season' => '2018-19',
                    'SeasonType' => 'regular' }
-    @data = extract(Request.get('teaminfocommon', parameters))
+    @data = extract(NBAStats::Request.get('teaminfocommon', parameters))
   end
 
   def abbreviation

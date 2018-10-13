@@ -1,5 +1,6 @@
 require 'json'
 require 'rest-client'
+
 require './lib/team'
 require './lib/player'
 require './lib/request'
