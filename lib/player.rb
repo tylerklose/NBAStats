@@ -64,6 +64,6 @@ class Player
   end
 
   def years_of_experience
-    rookie ? 0 : @experience.to_i
+    rookie? ? 0 : @experience.to_i
   end
 end

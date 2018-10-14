@@ -46,7 +46,7 @@ class TeamInfo
   end
 
   def id
-    @response[0]
+    @data[0]
   end
 
   def losses

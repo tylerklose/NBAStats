@@ -37,5 +37,6 @@ Tags: nbastats, query
   |warriors    |-           |
   |wizards     |-           |
 
-## Tests
+## Check Knicks' head coach
 * The "knicks" head coach should be "David Fizdale"
+* Test the "knicks" TeamInfo and TeamRoster

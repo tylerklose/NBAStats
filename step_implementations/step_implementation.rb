@@ -75,7 +75,7 @@ step 'Check all Player attributes' do
   player.years_of_experience
 end
 
-step 'Check all coach attributes' do
+step 'Check all Coach attributes' do
   coach = @object.coaches.first
 
   coach.coaching_level
@@ -90,7 +90,7 @@ step 'Check all coach attributes' do
   coach.season
   coach.team_id
   coach.assistant?
-  coach.head_coach
+  coach.head_coach?
 end
 
 step 'Check all the TeamInfo attributes' do
