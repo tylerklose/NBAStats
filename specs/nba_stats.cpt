@@ -1,0 +1,6 @@
+# Access the <team> <attribute>
+* Get the <team> <attribute>
+
+# The <team> head coach should be <full_name>
+* Access the <team> "roster"
+* Assert that the head coach is <full_name>

@@ -22,6 +22,23 @@ step 'Coaches are still up to date <table>' do |coaches_table|
   end
 end
 
+step 'Create Team object <table>' do |teams_table|
+  teams_table.rows.each do |team_row|
+    NBAStats::Team.send(team_row['Team'])
+  end
+end
+
+@object = nil
+
+step 'Get the <team> <attribute>' do |team, attribute|
+  team = NBAStats::Team.send(team)
+  @object = team.send(attribute)
+end
+
+step 'Assert that the head coach is <full_name>' do |full_name|
+  assert_equal(@object.coaches.first.full_name, full_name)
+end
+
 step 'Data is obtainable <table>' do |queries_table|
   queries_table.rows.each do |query_row|
     queries = [query_row['Team'], query_row['first_method'], query_row['second_method'], query_row['third_method'], query_row['fourth_method']].map {|method_name| method_name == 'nil' ? nil : method_name}.compact
