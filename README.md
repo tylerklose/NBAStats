@@ -1,4 +1,5 @@
-![Coverage](https://github.com/tylerklose/NBAStats/blob/housekeeping/coverage/coverage.svg) [![Gauge Badge](https://gauge.org/Gauge_Badge.svg)](https://gauge.org)
+[![Gauge Badge](https://gauge.org/Gauge_Badge.svg)](https://gauge.org)
+![Coverage](https://github.com/tylerklose/NBAStats/blob/housekeeping/coverage/coverage.svg)
 
 # NBAStats
 A Ruby wrapper around the completely undocumented stats.nba.com API

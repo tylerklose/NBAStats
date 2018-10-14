@@ -2,3 +2,7 @@ AllCops:
   Exclude:
     - 'specs/*'
     - 'vendor/**/*'
+
+Metrics/LineLength:
+  Exclude:
+    - 'Gemfile*'
