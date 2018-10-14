@@ -5,8 +5,8 @@ gem 'rest-client', '~> 2.0.2'
 
 group :development, :test do
   gem 'rubocop', '~> 0.59.2'
-  gem 'simplecov', '~> 0.8.2', require: false
-  gem 'simplecov-shield', require: false
+  gem 'simplecov', '~> 0.16.1', require: false
+  gem 'simplecov-shield', git: 'https://github.com/aterris/simplecov-shield', require: false
 end
 
 group :test do

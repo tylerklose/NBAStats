@@ -2,9 +2,13 @@ require 'test/unit'
 include Test::Unit::Assertions # rubocop:disable Style/MixinUsage
 
 require 'simplecov'
-# require 'simplecov-shield'
+require 'simplecov-shield'
 
-# SimpleCov.formatter = SimpleCov::Formatter::ShieldFormatter
+SimpleCov.formatters = SimpleCov::Formatter::MultiFormatter.new([
+  SimpleCov::Formatter::HTMLFormatter,
+  SimpleCov::Formatter::ShieldFormatter
+])
+
 SimpleCov.start do
   add_filter('vendor')
 end
