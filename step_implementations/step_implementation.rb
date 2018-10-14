@@ -2,6 +2,9 @@ require 'test/unit'
 include Test::Unit::Assertions # rubocop:disable Style/MixinUsage
 
 require 'simplecov'
+require 'simplecov-shield'
+
+SimpleCov.formatter = SimpleCov::Formatter::ShieldFormatter
 SimpleCov.start
 
 step 'Require NBAStats library' do

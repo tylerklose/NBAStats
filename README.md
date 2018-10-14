@@ -1,3 +1,5 @@
+[![Coverage Status](https://img.shields.io/coveralls/tylerklose/simplecov-shield.svg)]
+
 # NBAStats
 A Ruby wrapper around the completely undocumented stats.nba.com API
 
