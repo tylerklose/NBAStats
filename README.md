@@ -1,4 +1,4 @@
-[![Coverage Status](https://img.shields.io/coveralls/tylerklose/simplecov-shield.svg)]
+![Coverage](https://cdn.rawgit.com/tylerklose/NBAStats/master/housekeeping/coverage.svg)
 
 # NBAStats
 A Ruby wrapper around the completely undocumented stats.nba.com API
