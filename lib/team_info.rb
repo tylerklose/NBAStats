@@ -1,25 +1,73 @@
+# The response returned via NBAStats::Teams.knicks.info
+# will be an instance of the Player class.
 class TeamInfo
-  attr_reader :name, :abbreviation, :city, :code, :conference, :conference_rank,
-              :current_or_last_year, :division, :division_rank, :first_year,
-              :id, :losses, :season_year, :wins, :win_percentage
+  attr_reader :data
 
   def initialize(team_id)
-    response = JSON.parse(RestClient.get("stats.nba.com/stats/teaminfocommon/?LeagueID=00&TeamID=#{team_id}&Season=2018-19&SeasonType=regular", NBAStats::REQUEST_HEADERS))['resultSets'][0]['rowSet'][0]
+    parameters = { 'TeamID' => team_id, 'Season' => '2018-19',
+                   'SeasonType' => 'regular' }
+    @data = extract(NBAStats::Request.get('teaminfocommon', parameters))
+  end
 
-    @name = response[3]
-    @abbreviation = response[4]
-    @city = response[2]
-    @code = response[7]
-    @conference = response[5]
-    @conference_rank = response[11]
-    @current_or_last_year = response[14]
-    @division = response[6]
-    @division_rank = response[12]
-    @first_year = response[13]
-    @id = response[0]
-    @losses = response[9]
-    @season_year = response[1]
-    @wins = response[8]
-    @win_percentage = response[10]
+  def abbreviation
+    @data[4]
+  end
+
+  def city
+    @data[2]
+  end
+
+  def code
+    @data[7]
+  end
+
+  def conference
+    @data[5]
+  end
+
+  def conference_rank
+    @data[11]
+  end
+
+  def current_or_final_year
+    @data[14]
+  end
+
+  def division
+    @data[6]
+  end
+
+  def division_rank
+    @data[12]
+  end
+
+  def first_year
+    @data[13]
+  end
+
+  def id
+    @data[0]
+  end
+
+  def losses
+    @data[9]
+  end
+
+  def season_year
+    @data[1]
+  end
+
+  def wins
+    @data[8]
+  end
+
+  def win_percentage
+    @data[10]
+  end
+
+  protected
+
+  def extract(response)
+    response['resultSets'][0]['rowSet'][0]
   end
 end

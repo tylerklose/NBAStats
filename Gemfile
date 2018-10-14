@@ -1,6 +1,16 @@
 source 'https://rubygems.org'
 
-ruby '2.5.1' # https://www.ruby-lang.org/
+gem 'json', '~> 1.8.0'
+gem 'rest-client', '~> 2.0.2'
 
-gem 'json', '~>2.1.0'
-gem 'rest-client', '~>2.0.2'
+group :development, :test do
+  gem 'rubocop', '~> 0.59.2'
+  gem 'simplecov', '~> 0.16.1', require: false
+  gem 'simplecov-shield', git: 'https://github.com/aterris/simplecov-shield', require: false
+end
+
+group :test do
+  gem 'gauge-ruby', '~> 0.5.1'
+  gem 'test-unit', '~> 3.2.8'
+end
+
