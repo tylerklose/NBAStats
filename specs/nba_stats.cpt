@@ -1,6 +1,13 @@
 # Access the <team> <attribute>
-* Get the <team> <attribute>
+  * Get the <team> <attribute>
 
 # The <team> head coach should be <full_name>
-* Access the <team> "roster"
-* Assert that the head coach is <full_name>
+  * Access the <team> "roster"
+  * Assert that the head coach is <full_name>
+
+# Test the <team> TeamInfo and TeamRoster
+  * Access the <team> "roster"
+  * Check all Player attributes
+  * Check all Coach attributes
+  * Access the <team> "info"
+  * Check all the TeamInfo attributes
