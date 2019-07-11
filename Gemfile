@@ -10,7 +10,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'gauge-ruby', '~> 0.5.1'
+  gem 'gauge-ruby', '~> 0.5.2'
   gem 'test-unit', '~> 3.2.8'
 end
 
