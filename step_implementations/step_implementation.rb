@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test/unit'
 include Test::Unit::Assertions # rubocop:disable Style/MixinUsage
 

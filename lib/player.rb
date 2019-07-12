@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Each element of the array returned via NBAStats::Teams.knicks.roster.players
 # will be an instance of the Player class.
 class Player
