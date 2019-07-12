@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-gem 'json', '~> 1.8.0'
+gem 'json', '~> 2.2.0'
 gem 'rest-client', '~> 2.0.2'
 
 group :development, :test do
