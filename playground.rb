@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # a place to try things
 
 require './lib/nba_stats'

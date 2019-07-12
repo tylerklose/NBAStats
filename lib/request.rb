@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module NBAStats
   # Wrapper around the formulation of request to stats.nba.com
   module Request

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Each element of the array returned via NBAStats::Teams.knicks.roster.coaches
 # will be an instance of the Coach class.
 class Coach

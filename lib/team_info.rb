@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # The response returned via NBAStats::Teams.knicks.info
 # will be an instance of the Player class.
 class TeamInfo

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'json'
 require 'rest-client'
 
@@ -7,8 +9,8 @@ require './lib/request'
 
 # This is a wrapper around the undocumented API at stats.nba.com
 module NBAStats
-  BASE_URL = 'http://stats.nba.com/stats/'.freeze
-  CURRENT_SEASON = '2018-19'.freeze
+  BASE_URL = 'http://stats.nba.com/stats/'
+  CURRENT_SEASON = '2018-19'
 
   user_agent =  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5)'
   user_agent += ' AppleWebKit/537.36 (KHTML, like Gecko)'

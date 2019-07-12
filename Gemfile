@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 gem 'json', '~> 1.8.0'
@@ -13,4 +15,3 @@ group :test do
   gem 'gauge-ruby', '~> 0.5.2'
   gem 'test-unit', '~> 3.2.8'
 end
-
