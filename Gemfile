@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 gem 'json', '~> 2.2.0'
-gem 'rest-client', '~> 2.0.2'
+gem 'rest-client', '~> 2.1.0'
 
 group :development, :test do
   gem 'rubocop', '~> 0.68.1'
