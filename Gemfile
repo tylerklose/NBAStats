@@ -13,5 +13,5 @@ end
 
 group :test do
   gem 'gauge-ruby', '~> 0.5.2'
-  gem 'test-unit', '~> 3.3.3'
+  gem 'test-unit', '~> 3.3.4'
 end
